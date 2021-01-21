@@ -21,27 +21,32 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "It's a tie!";
     } else if (playerSelection == "rock" && computerSelection == "paper") {
+        computerScore += 1;
         return "Computer wins";
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        playerScore += 1;
         return "Player wins";
     } else if (playerSelection == "paper" && computerSelection == "rock") {
+        playerScore += 1;
         return "Player Wins";
     } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        computerScore += 1;
         return "Computer Wins"
     } else if (playerSelection == "scissors" && computerSelection == "rock") {
+        computerScore += 1;
         return "Computer Wins"
     } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        playerScore += 1;
         return "Player Wins"
     } else {
         return "Please pick either rock, paper or scissors!"
     }
-
 }
 //function in which the game plays 5 rounds automatically
 function game() {
 
     for (let i = 0; i < 5; i++) {
         console.log(playRound(playerSelection, computerSelection));
-
     }
+    console.log(`Player: ${playerScore} - Computer: ${computerScore}`);
 }
