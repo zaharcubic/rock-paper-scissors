@@ -1,0 +1,23 @@
+
+h1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#declaration {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
